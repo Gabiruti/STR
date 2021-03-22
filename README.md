@@ -1,0 +1,2 @@
+# STR
+GIT púbico projeto
