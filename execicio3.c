@@ -11,14 +11,16 @@
 #define FIBER_STACK 1024*64 
 
 // The child thread will execute this function 
+int n = 5;
 int threadFunction( void* argument ) 
 { 
-    printf("child thread exiting\n"); 
+    printf("%d numero n",n); 
     return 0; 
 } 
- 
+
 int main() 
  { 
+    int n = 5;
     void* stack; 
     pid_t pid; 
  
@@ -53,5 +55,7 @@ if ( pid == -1 )
 free( stack ); 
 printf( "Child thread returned and stack freed.\n" ); 
  
+return 0; 
+} 
 return 0; 
 } 
